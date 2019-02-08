@@ -16,31 +16,31 @@
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                            aria-expanded="false">TOPICS</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="index.html">Home</a>
-                            <a class="dropdown-item" href="#">JavaScript</a>
-                            <a class="dropdown-item" href="#">JavaScript Objects</a>
-                            <a class="dropdown-item" href="#">JSON</a>
-                            <a class="dropdown-item" href="#">AJAX</a>
-                            <a class="dropdown-item" href="#">Local Storage</a>
-                            <a class="dropdown-item" href="#">DOM</a>
-                            <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
-                            <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
-                            <a class="dropdown-item" href="#">JavaScript Events</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </li>
-                </ul>
                 <h1 class="display-4">JavaScript</h1>
                 <p class="lead">Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative
                     Arrays</p>
             </div>
         </div>
+        <ul class="nav nav-tabs sub-navigation">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">TOPICS</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                        <a class="dropdown-item" href="#">JavaScript Objects</a>
+                        <a class="dropdown-item" href="#">JSON</a>
+                        <a class="dropdown-item" href="#">AJAX</a>
+                        <a class="dropdown-item" href="#">Local Storage</a>
+                        <a class="dropdown-item" href="#">DOM</a>
+                        <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
+                        <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
+                        <a class="dropdown-item" href="#">JavaScript Events</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
     </header>
     <main>
         <h2 class="page-subtitle">Build a Person</h2>
@@ -68,10 +68,12 @@
         </form>
     </main>
     <footer></footer>
+
     <!-- BUILD PERSON SCRIPT -->
     <script>
+
         function sum() {
-            debugger
+
             //VARIABLES 
             var firstName = document.getElementById('personFirstName').value;
             var lastName = document.getElementById('personLastName').value;
@@ -93,6 +95,7 @@
             for (var i = 0; i < numbersArray.length; i++) {
                 numbersArray[i] = parseInt(numbersArray[i]);
             }
+
             //SUM LUCKY NUMBERS
             function add(a, b) {
                 return a + b;
@@ -100,8 +103,9 @@
             var total = numbersArray.reduce(add, 0);
 
             //CONDITIONAL STATEMENT
+            var greatLess = (total >=10) ? "Is greater than 10" : "Is less than 10";
 
-
+            return alert(`${firstName} ${lastName} has been created with an age of ${age} the sum of the lucky numbers ${greatLess}`);
 
         }
     </script>

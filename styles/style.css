@@ -3,6 +3,9 @@
 .jumbotron h1 {
   text-align: center; }
 
+.sub-navigation {
+  margin-left: 14%; }
+
 .card {
   margin: 20px; }
 
@@ -13,5 +16,9 @@
 
 form {
   margin: 0 15% 15% 15%; }
+
+@media screen and (max-width: 850px) {
+  .sub-navigation {
+    margin-left: 12%; } }
 
 /*# sourceMappingURL=style.css.map */

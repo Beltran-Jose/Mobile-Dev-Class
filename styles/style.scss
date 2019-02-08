@@ -6,6 +6,9 @@
         text-align: center;
     }
 }
+.sub-navigation {
+    margin-left: 14%;
+}
 // BODY //
 .card {
     margin: 20px;
@@ -18,3 +21,10 @@
 form {
     margin:0 15% 15% 15%;
 }
+
+// MEDIA QUERIES
+@media screen and (max-width: 850px) {
+    .sub-navigation {
+        margin-left: 12%;
+    }
+  }
