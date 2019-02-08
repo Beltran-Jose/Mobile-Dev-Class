@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>JavaScript</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">TOPICS</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">Home</a>
+                            <a class="dropdown-item" href="#">JavaScript</a>
+                            <a class="dropdown-item" href="#">JavaScript Objects</a>
+                            <a class="dropdown-item" href="#">JSON</a>
+                            <a class="dropdown-item" href="#">AJAX</a>
+                            <a class="dropdown-item" href="#">Local Storage</a>
+                            <a class="dropdown-item" href="#">DOM</a>
+                            <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
+                            <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
+                            <a class="dropdown-item" href="#">JavaScript Events</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+                <h1 class="display-4">JavaScript</h1>
+                <p class="lead">Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative
+                    Arrays</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 class="page-subtitle">Build a Person</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" class="form-control" id="personFirstName" aria-describedby="firstNameHelp"
+                    placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" id="personLastName" aria-describedby="lastNameHelp" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Age</label>
+                <input type="text" class="form-control" id="personAge" aria-describedby="ageHelp" placeholder="Enter Person's Age">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Person's lucky #'s</label>
+                <input type="text" class="form-control" placeholder="Numbers" id="numbers">
+                <small id="numHelp" class="form-text text-muted">Enter a series of number seperated by commas IE:
+                    1,2,3,4</small>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="sum()">BUILD</button>
+        </form>
+    </main>
+    <footer></footer>
+    <!-- BUILD PERSON SCRIPT -->
+    <script>
+        function sum() {
+            debugger
+            //VARIABLES 
+            var firstName = document.getElementById('personFirstName').value;
+            var lastName = document.getElementById('personLastName').value;
+            var age = document.getElementById('personAge').value;
+            var numbers = document.getElementById('numbers').value;
+
+            //ARRAY
+            var numbersArray = numbers.split(",");
+
+            //create the static person "ASSOCIATIVE ARRAY". 
+            var person = {
+                "firstName": firstName,
+                "lastName": lastName,
+                "age": age,
+                "luckyNumbers": numbersArray
+            };
+
+            //LOOP
+            for (var i = 0; i < numbersArray.length; i++) {
+                numbersArray[i] = parseInt(numbersArray[i]);
+            }
+            //SUM LUCKY NUMBERS
+            function add(a, b) {
+                return a + b;
+            }
+            var total = numbersArray.reduce(add, 0);
+
+            //CONDITIONAL STATEMENT
+
+
+
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
