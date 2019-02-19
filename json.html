@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">JSON</h1>
+                <p class="lead">Parse, Stringify</p>
+            </div>
+        </div>
+        <ul class="nav nav-tabs sub-navigation">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">TOPICS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a class="dropdown-item" href="js.html">JavaScript</a>
+                    <a class="dropdown-item" href="jsobjects.html">JavaScript Objects</a>
+                    <a class="dropdown-item" href="json.html">JSON</a>
+                    <a class="dropdown-item" href="#">AJAX</a>
+                    <a class="dropdown-item" href="#">Local Storage</a>
+                    <a class="dropdown-item" href="#">DOM</a>
+                    <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
+                    <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
+                    <a class="dropdown-item" href="#">JavaScript Events</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h2 class="page-subtitle">Stringify an Parse Your Car.</h2>
+        <form>
+            <div class="form-group">
+                <label for="carModelEntry">Car Model</label>
+                <input type="text" class="form-control" id="carModel" aria-describedby="carModelHelp" placeholder="Enter the car model">
+            </div>
+            <div class="form-group">
+                <label for="carTypeEntry">Car type</label>
+                <input type="text" class="form-control" id="carType" aria-describedby="carTypeHelp" placeholder="Enter the type, SUV, sedan, etc.">
+            </div>
+            <div class="form-group">
+                <label for="carYearEntry">Car Year</label>
+                <input type="text" class="form-control" id="carYear" aria-describedby="carYearHelp" placeholder="Enter the year of the car.">
+            </div>
+        </form>
+        <button class="btn btn-primary" onclick="stringifyFunction()">Stringify</button>
+        <!-- <button class="btn btn-primary" onclick="stringifyFunction().reverseParse()">Parse</button> -->
+        <h1 id="div1"></h1>
+    </main>
+    <footer></footer>
+
+
+    <script>
+        function stringifyFunction() {
+            //VARIABLES
+            var model = document.getElementById("carModel").value;
+            var type = document.getElementById("carType").value;
+            var year = document.getElementById("carYear").value;
+
+            //OBJECT CREATION FUNCTION
+            var Car = function buildCar(model, type, year) {
+                this.model = model;
+                this.type = type;
+                this.year = year;
+            }
+
+            //PROPERTIES, METHODS, INHERITANCE
+            Car.prototype.drive = 'Driving';
+            Car.prototype.stop = 'Stoping';
+
+            var newCar = new Car(model, type, year);
+
+            var newCarStringify = JSON.stringify(newCar);
+
+            function IsJsonString(newCarStringify) {
+                var str = newCarStringify.toString();
+
+                try {
+                    JSON.parse(str);
+                } catch (e) {
+                    return alert(false);
+                }
+
+                return alert(true);
+            }
+
+            IsJsonString();
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
