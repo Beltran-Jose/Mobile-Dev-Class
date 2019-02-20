@@ -16,8 +16,8 @@
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">JavaScript Objects</h1>
-                <p class="lead">Object Creation Functions, Inheritance, Properties, Methods, Instantiation</p>
+                <h1 class="display-4">AJAX</h1>
+                <p class="lead">Using XMLHTTPRequest to Consume a JSON Web Service</p>
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
@@ -42,50 +42,21 @@
         </ul>
     </header>
     <main>
-        <h2 class="page-subtitle">Build a Car</h2>
+        <h2 class="page-subtitle">REQUEST INFO</h2>
         <form>
             <div class="form-group">
                 <label for="carModelEntry">Car Model</label>
                 <input type="text" class="form-control" id="carModel" aria-describedby="carModelHelp" placeholder="Enter the car model">
             </div>
-            <div class="form-group">
-                <label for="carTypeEntry">Car type</label>
-                <input type="text" class="form-control" id="carType" aria-describedby="carTypeHelp" placeholder="Enter the type, SUV, sedan, etc.">
-            </div>
-            <div class="form-group">
-                <label for="carYearEntry">Car Year</label>
-                <input type="text" class="form-control" id="carYear" aria-describedby="carYearHelp" placeholder="Enter the year of the car.">
-            </div>
         </form>
-        <button class="btn btn-primary" onclick="carFunction()">BUILD</button>
-        <h1 id="div1"></h1>
+        <button class="btn btn-primary" onclick="carFunction()">REQUEST</button>
+
     </main>
     <footer></footer>
 
 
     <script>
-        function carFunction() {
-            //VARIABLES
-            var model = document.getElementById("carModel").value;
-            var type = document.getElementById("carType").value;
-            var year = document.getElementById("carYear").value;
 
-            //OBJECT CREATION FUNCTION
-            var Car = function buildCar(model, type, year) {
-                this.model = model;
-                this.type = type;
-                this.year = year;
-            }
-
-            //PROPERTIES, METHODS, INHERITANCE
-            Car.prototype.drive = 'Driving';
-            Car.prototype.stop = 'Stoping';
-
-            var newCar = new Car(model, type, year);
-
-            alert(`You are ${newCar.drive} a ${newCar.model} ${newCar.type} from year ${newCar.year}!`);
-
-        }
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

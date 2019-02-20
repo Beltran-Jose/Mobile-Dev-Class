@@ -22,25 +22,25 @@
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                        aria-expanded="false">TOPICS</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html">Home</a>
-                        <a class="dropdown-item" href="js.html">JavaScript</a>
-                        <a class="dropdown-item" href="jsobjects.html">JavaScript Objects</a>
-                        <a class="dropdown-item" href="#">JSON</a>
-                        <a class="dropdown-item" href="#">AJAX</a>
-                        <a class="dropdown-item" href="#">Local Storage</a>
-                        <a class="dropdown-item" href="#">DOM</a>
-                        <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
-                        <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
-                        <a class="dropdown-item" href="#">JavaScript Events</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-            </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">TOPICS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a class="dropdown-item" href="js.html">JavaScript</a>
+                    <a class="dropdown-item" href="jsobjects.html">JavaScript Objects</a>
+                    <a class="dropdown-item" href="json.html">JSON</a>
+                    <a class="dropdown-item" href="ajax.thml">AJAX</a>
+                    <a class="dropdown-item" href="#">Local Storage</a>
+                    <a class="dropdown-item" href="#">DOM</a>
+                    <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
+                    <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
+                    <a class="dropdown-item" href="#">JavaScript Events</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li>
+        </ul>
     </header>
     <main>
         <h2 class="page-subtitle">Build a Person</h2>
@@ -71,7 +71,6 @@
 
     <!-- BUILD PERSON SCRIPT -->
     <script>
-
         function sum() {
 
             //VARIABLES 
@@ -103,9 +102,11 @@
             var total = numbersArray.reduce(add, 0);
 
             //CONDITIONAL STATEMENT
-            var greatLess = (total >=10) ? "Is greater than 10" : "Is less than 10";
+            var greatLess = (total >= 10) ? "Is greater than 10" : "Is less than 10";
 
-            return alert(`${person["firstName"]} ${person["lastName"]} has been created with an age of ${person["age"]} the sum of the lucky numbers ${greatLess}`);
+            return alert(
+                `${person["firstName"]} ${person["lastName"]} has been created with an age of ${person["age"]} the sum of the lucky numbers ${greatLess}`
+            );
 
         }
     </script>

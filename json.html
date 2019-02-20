@@ -29,7 +29,7 @@
                     <a class="dropdown-item" href="js.html">JavaScript</a>
                     <a class="dropdown-item" href="jsobjects.html">JavaScript Objects</a>
                     <a class="dropdown-item" href="json.html">JSON</a>
-                    <a class="dropdown-item" href="#">AJAX</a>
+                    <a class="dropdown-item" href="ajax.html">AJAX</a>
                     <a class="dropdown-item" href="#">Local Storage</a>
                     <a class="dropdown-item" href="#">DOM</a>
                     <a class="dropdown-item" href="#">CSS3 using JavaScript</a>
@@ -43,7 +43,7 @@
     </header>
     <main>
         <h2 class="page-subtitle">Stringify an Parse Your Car.</h2>
-        <form>
+        <form style="margin-bottom: 25px">
             <div class="form-group">
                 <label for="carModelEntry">Car Model</label>
                 <input type="text" class="form-control" id="carModel" aria-describedby="carModelHelp" placeholder="Enter the car model">
@@ -57,15 +57,23 @@
                 <input type="text" class="form-control" id="carYear" aria-describedby="carYearHelp" placeholder="Enter the year of the car.">
             </div>
         </form>
-        <button class="btn btn-primary" onclick="stringifyFunction()">Stringify</button>
-        <!-- <button class="btn btn-primary" onclick="stringifyFunction().reverseParse()">Parse</button> -->
-        <h1 id="div1"></h1>
+
+        <div class="row" style="margin-bottom: 25px">
+            <div id="stringToParse" class="col-md-12" style="text-align: center;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <button class="btn btn-primary" onclick="stringifyFunction()">Stringify</button>
+                <button class="btn btn-primary" onclick="parseFunction()">Parse</button>
+            </div>
+        </div>
     </main>
     <footer></footer>
 
 
     <script>
         function stringifyFunction() {
+
             //VARIABLES
             var model = document.getElementById("carModel").value;
             var type = document.getElementById("carType").value;
@@ -78,27 +86,43 @@
                 this.year = year;
             }
 
-            //PROPERTIES, METHODS, INHERITANCE
-            Car.prototype.drive = 'Driving';
-            Car.prototype.stop = 'Stoping';
-
+            //Creates the new JS Object
             var newCar = new Car(model, type, year);
 
+            //CONVERTS the object into a JSON object
             var newCarStringify = JSON.stringify(newCar);
 
-            function IsJsonString(newCarStringify) {
-                var str = newCarStringify.toString();
+            alert(newCarStringify);
 
-                try {
-                    JSON.parse(str);
-                } catch (e) {
-                    return alert(false);
-                }
+        }
+        //FUNCTION TO PARSE JSON OBJECT
+        function parseFunction() {
 
-                return alert(true);
+            //VARIABLES
+            var model = document.getElementById("carModel").value;
+            var type = document.getElementById("carType").value;
+            var year = document.getElementById("carYear").value;
+
+            //OBJECT CREATION FUNCTION
+            var Car = function buildCar(model, type, year) {
+                this.model = model;
+                this.type = type;
+                this.year = year;
             }
 
-            IsJsonString();
+            //Creates the new JS Object
+            var newCar = new Car(model, type, year);
+
+            //CONVERTS the object into a JSON object
+            var newCarStringify = JSON.stringify(newCar);
+
+            //CONVERTS the JSON Object into a Javascript object
+            var jsObject = JSON.parse(newCarStringify);
+
+            //Output JS Object
+            document.getElementById("stringToParse").innerHTML =
+                `{Model: "${jsObject.model}", Type: "${jsObject.type}", Year: "${jsObject.year}"}`;
+
         }
     </script>
     <!-- Optional JavaScript -->
