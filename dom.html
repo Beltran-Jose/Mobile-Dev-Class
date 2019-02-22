@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript</title>
+    <title>DOM</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
@@ -16,8 +16,8 @@
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">AJAX</h1>
-                <p class="lead">Using XMLHTTPRequest to Consume a JSON Web Service</p>
+                <h1 class="display-4">DOM</h1>
+                <p class="lead">DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc</p>
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
@@ -42,49 +42,38 @@
         </ul>
     </header>
     <main>
-        <h2 class="page-subtitle">View Galaxy Image from NASA API</h2>
-        <div id="img"></div>
-        <div class="container" style="text-align: center; margin-top: 50px;">
-                <button class="btn btn-primary" onclick="getApi()" style=" width: 25%;">VIEW</button>
-        </div>
+        <h2 class="page-subtitle">Saving to local storage</h2>
+        <form style="margin-bottom: 25px">
+            <div class="form-group">
+                <label for="carModelEntry">A Sentance</label>
+                <input type="text" class="form-control" id="sentance" aria-describedby="carModelHelp" placeholder="Enter a sentance to Save">
+            </div>
+        </form>
 
+        <div id="displaySentance"></div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <button class="btn btn-primary" onclick="saveFun()">Save & Retrieve Sentance</button>
+            </div>
+        </div>
     </main>
     <footer></footer>
 
 
     <script>
-        function getApi() {
-            const xhr = new XMLHttpRequest();
-
-            xhr.onload = function () {
-                if (this.status === 200) {
-                    try {
-                        const responseObj = JSON.parse(this.responseText);
-                        console.log(responseObj);
-                        document.getElementById("img").innerHTML =
-                            `<img src="${responseObj["url"]}" alt="Mars rover picture">`;
-
-                    } catch (e) {
-                        alert("There was an error!!");
-                    }
-                } else {
-                    alert("Did not receive 200 OK from resonse!");
-                }
+        function saveFun() {
+            var sentanceValue = document.getElementById("sentance").value;
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                // set the item into storage
+                localStorage.setItem("sentance", sentanceValue);
+                // Retrieve
+                document.getElementById("displaySentance").innerHTML = localStorage.getItem("sentance");
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
             }
-
-            xhr.open('get', 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
-            // https://api.nasa.gov/planetary/apod?api_key=aEg2hQuvE6NPLS9GfzdwJUm6TlLHAo18MHK0vmmr
-            xhr.send();
         }
-
-        // fetch('URL')
-        // .then(result =>{
-        //     console.log();
-        // })
-        // .then(data => {
-
-        // })
-        // .catch(error => console.log(error));
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -97,4 +86,4 @@
 
 </body>
 
-</html>
+</html>                 
