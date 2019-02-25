@@ -46,8 +46,9 @@
         <h2 class="page-subtitle">DOM Manipulation with JavaScript</h2>
 
         <div class="boxes" id="boxes">
-            <div class="red" id="red">RED BOX</div>
+            <div id="r3d"></div>
         </div>
+        <div class="red" id="red"></div>
 
         <div id="displaySentance"></div>
 
@@ -63,7 +64,11 @@
             </div>
 
             <div class="col-md-12" style="text-align: center; margin: 10px;">
-                <button class="btn btn-primary" onclick="saveFun()">REMOVE Green Box</button>
+                <button class="btn btn-primary" onclick="removeIns()">REMOVE InsertedBefore Green Box</button>
+            </div>
+
+            <div class="col-md-12" style="text-align: center; margin: 10px;">
+                <button class="btn btn-primary" onclick="removeAppend()">REMOVE Appended Child Green Box</button>
             </div>
         </div>
     </main>
@@ -72,31 +77,32 @@
 
     <script>
         function appendCh() {
-            debugger
+
             var green = document.createElement("div");
             var red = document.getElementById("red");
             green.className = "green";
             red.appendChild(green);
-            // document.getElementById("myList").appendChild(node);
         }
 
         function insertBe() {
 
             var green = document.createElement("div");
-            var red = document.getElementById("red");
+            var red = document.getElementById("r3d");
             var boxes = document.getElementById("boxes");
             green.className = "green";
-            boxes.insertBefore(green, red);
-            // document.getElementById("myList").appendChild(node);
+            boxes.insertBefore(green, r3d);
         }
 
-        function removeCh() {
+        function removeIns() {
 
-            var green = document.createElement("div");
-            var red = document.getElementById("red");
             var boxes = document.getElementById("boxes");
-            green.className = "green";
-            boxes.insertBefore(green, red);
+            boxes.removeChild(boxes.childNodes[0]);
+        }
+
+        function removeAppend() {
+
+            var red = document.getElementById("red");
+            red.removeChild(red.childNodes[0]);
             // document.getElementById("myList").appendChild(node);
         }
     </script>
