@@ -53,6 +53,7 @@
 
 
     <script>
+        
         function getApi() {
             const xhr = new XMLHttpRequest();
 
@@ -73,7 +74,9 @@
             }
 
             xhr.open('get', 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+
             // https://api.nasa.gov/planetary/apod?api_key=aEg2hQuvE6NPLS9GfzdwJUm6TlLHAo18MHK0vmmr
+
             xhr.send();
         }
 
@@ -85,6 +88,7 @@
 
         // })
         // .catch(error => console.log(error));
+
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

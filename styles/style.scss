@@ -1,25 +1,35 @@
 .jumbotron {
-    p{
+    p {
         text-align: center;
     }
+
     h1 {
         text-align: center;
     }
 }
+
 .sub-navigation {
     margin-left: 14%;
 }
+
 // BODY //
 .card {
     margin: 20px;
 }
+
 .page-subtitle {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
+
 form {
-    margin:0 15% 15% 15%;
+    margin: 0 15% 15% 15%;
+}
+
+.red {
+    width: 50%;
+    background-color: red;
 }
 
 // MEDIA QUERIES
@@ -27,4 +37,4 @@ form {
     .sub-navigation {
         margin-left: 12%;
     }
-  }
+}
