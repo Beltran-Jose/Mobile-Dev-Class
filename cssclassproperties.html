@@ -9,15 +9,15 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">DOM</h1>
-                <p class="lead">DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc</p>
+                <h1 class="display-4">CSS3 Using JavaScript</h1>
+                <p class="lead">Manipulating CSS Class Properties Using JavaScript</p>
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
@@ -43,68 +43,35 @@
     </header>
     <main>
 
-        <h2 class="page-subtitle">DOM Manipulation with JavaScript</h2>
+        <h2 class="page-subtitle">Adjust the Properties of the Box</h2>
 
         <div class="boxes" id="boxes">
-            <div id="r3d"></div>
+            <div id="css-box"></div>
         </div>
-        <div class="red" id="red"></div>
 
-        <div id="displaySentance"></div>
 
-        <br>
 
-        <div class="row">
-            <div class="col-md-12" style="text-align: center; margin: 10px;">
-                <button class="btn btn-primary" onclick="appendCh()">Green inside Red</button>
-            </div>
+        <form style="margin-bottom: 25px">
+        </form>
 
-            <div class="col-md-12" style="text-align: center; margin: 10px;">
-                <button class="btn btn-primary" onclick="insertBe()">Insert Before Red</button>
-            </div>
 
-            <div class="col-md-12" style="text-align: center; margin: 10px;">
-                <button class="btn btn-primary" onclick="removeIns()">REMOVE InsertedBefore Green Box</button>
-            </div>
-
-            <div class="col-md-12" style="text-align: center; margin: 10px;">
-                <button class="btn btn-primary" onclick="removeAppend()">REMOVE Appended Child Green Box</button>
-            </div>
         </div>
     </main>
     <footer></footer>
 
 
     <script>
-        function appendCh() {
+        function adjustWidth() {
+            var box = document.getElementById("css-box");
+            var width = document.getElementById("getWidth").value;
 
-            var green = document.createElement("div");
-            var red = document.getElementById("red");
-            green.className = "green";
-            red.appendChild(green);
+            box.style.width = width;
+
         }
 
-        function insertBe() {
+        function adjustColor(){
 
-            var green = document.createElement("div");
-            var red = document.getElementById("r3d");
-            var boxes = document.getElementById("boxes");
-            green.className = "green";
-            boxes.insertBefore(green, r3d);
-        }
-
-        function removeIns() {
-
-            var boxes = document.getElementById("boxes");
-            boxes.removeChild(boxes.childNodes[0]);
-        }
-
-        function removeAppend() {
-
-            var red = document.getElementById("red");
-            red.removeChild(red.childNodes[0]);
-            // document.getElementById("myList").appendChild(node);
-        }
+             }
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
