@@ -36,7 +36,7 @@
                     <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
                     <a class="dropdown-item" href="#">JavaScript Events</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
+                    <!-- <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
             </li>
         </ul>
@@ -45,33 +45,48 @@
 
         <h2 class="page-subtitle">Adjust the Properties of the Box</h2>
 
-        <div class="boxes" id="boxes">
-            <div id="css-box"></div>
-        </div>
+        <div id="css-box"></div>
 
 
-
-        <form style="margin-bottom: 25px">
+        <form>
+            <div class="form-group">
+                <label for="carModelEntry">Change Box Width</label>
+                <input type="text" class="form-control" id="boxWidth" aria-describedby="carModelHelp" placeholder="Enter box width number">
+                <button class="btn btn-primary" onclick="adjustWidth()">Width</button>
+            </div>
+            <div class="form-group">
+                <label for="carTypeEntry">Change Box Height</label>
+                <input type="text" class="form-control" id="boxHeight" aria-describedby="carTypeHelp" placeholder="Enter box height number">
+                <button class="btn btn-primary" onclick="adjustHeight()">Height</button>
+            </div>
+            <div class="form-group">
+                <label for="carYearEntry">Change Box Color</label>
+                <input type="text" class="form-control" id="boxColor" aria-describedby="carYearHelp" placeholder="Enter a color">
+                <button class="btn btn-primary" onclick="adjustColor()">Color</button>
+            </div>
         </form>
 
-
-        </div>
     </main>
     <footer></footer>
 
 
     <script>
         function adjustWidth() {
+            
+            var newWidth = document.getElementById("boxWidth").value;
             var box = document.getElementById("css-box");
-            var width = document.getElementById("getWidth").value;
-
-            box.style.width = width;
+            // var widthX = document.getElementById("getWidth").value;
+            box.style.width = `${newWidth}px`;
 
         }
 
-        function adjustColor(){
+        function adjustHeight() {
 
-             }
+        }
+
+        function adjustColor() {
+
+        }
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
