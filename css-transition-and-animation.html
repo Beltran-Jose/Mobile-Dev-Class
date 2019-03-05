@@ -16,8 +16,8 @@
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">CSS3 Using JavaScript</h1>
-                <p class="lead">Manipulating CSS Class Properties Using JavaScript</p>
+                <h1 class="display-4">CSS3 Transitions, Animations, and Transformations</h1>
+                <p class="lead">Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
@@ -33,7 +33,7 @@
                     <a class="dropdown-item" href="localstorage.html">Local Storage</a>
                     <a class="dropdown-item" href="dom.html">DOM</a>
                     <a class="dropdown-item" href="cssclassproperties.html">CSS3 using JavaScript</a>
-                    <a class="dropdown-item" href="#">CSS3 Transitions, Animations, and Transformations</a>
+                    <a class="dropdown-item" href="css-transition-and-animation.html">CSS3 Transitions, Animations, and Transformations</a>
                     <a class="dropdown-item" href="#">JavaScript Events</a>
                     <div class="dropdown-divider"></div>
                     <!-- <a class="dropdown-item" href="#">Separated link</a> -->
@@ -43,28 +43,9 @@
     </header>
     <main>
 
-        <h2 class="page-subtitle">Adjust the Properties of the Box</h2>
+        <h2 class="page-subtitle">hover over the box</h2>
 
-        <div id="css-box"></div>
-
-
-        <form>
-            <!-- <div class="form-group">
-                <label for="carModelEntry">Change Box Width</label>
-                <input type="text" class="form-control" id="boxWidth" aria-describedby="carModelHelp" placeholder="Enter box width number">
-                <button class="btn btn-primary" onclick="adjustWidth()">Width</button>
-            </div>
-            <div class="form-group">
-                <label for="carTypeEntry">Change Box Height</label>
-                <input type="text" class="form-control" id="boxHeight" aria-describedby="carTypeHelp" placeholder="Enter box height number">
-                <button class="btn btn-primary" onclick="adjustHeight()">Height</button>
-            </div> -->
-            <div class="form-group">
-                <label for="carYearEntry">Change Box Color</label>
-                <input type="text" class="form-control" id="boxColor" aria-describedby="carYearHelp" placeholder="Enter a color">
-                <button class="btn btn-primary" onclick="adjustColor()">Color</button>
-            </div>
-        </form>
+        <div id="css-box" onmouseover="triggerAnimation()"></div>
 
     </main>
     <footer></footer>
@@ -72,9 +53,10 @@
 
     <script>
 
-        function adjustColor() {
+        function triggerAnimation() {
 
         }
+        
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
