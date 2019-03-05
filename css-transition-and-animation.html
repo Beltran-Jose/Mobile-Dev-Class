@@ -48,7 +48,7 @@
         <div id="css-box"></div>
 
 
-       
+        <form>
             <!-- <div class="form-group">
                 <label for="carModelEntry">Change Box Width</label>
                 <input type="text" class="form-control" id="boxWidth" aria-describedby="carModelHelp" placeholder="Enter box width number">
@@ -64,51 +64,16 @@
                 <input type="text" class="form-control" id="boxColor" aria-describedby="carYearHelp" placeholder="Enter a color">
                 <button class="btn btn-primary" onclick="adjustColor()">Color</button>
             </div>
-    
+        </form>
 
     </main>
     <footer></footer>
 
 
     <script>
-        function adjustWidth() {
-
-            var newWidth = document.getElementById("boxWidth").value;
-            var box = document.getElementById("css-box");
-            // var widthX = document.getElementById("getWidth").value;
-            box.style.width = `${newWidth}px`;
-
-        }
-
-        function adjustHeight() {
-
-        }
 
         function adjustColor() {
-            var newColor = document.getElementById("boxColor").value;
 
-            var box = document.getElementById("css-box");
-
-            var applied = box.style.backgroundColor = `${newColor}`;
-
-            // var sheet = document.createElement('style');
-
-            if (typeof (Storage) !== "undefined") {
-                // set the item into storage
-                localStorage.setItem("newColor", applied);
-                // Retrieve
-                localStorage.getItem("newColor");
-            } else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-            }
-
-            
-
-        //    box.style.backgroundColor = `${newColor}`; 
-
-            // sheet.innerHTML =
-            //     `#css-box {border: 2px solid black; background-color: ${newColor}; width: 100px; height: 100px;}`;
-            // document.body.appendChild(sheet);
         }
     </script>
     <!-- Optional JavaScript -->
