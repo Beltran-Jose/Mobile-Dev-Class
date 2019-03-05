@@ -49,7 +49,7 @@
 
 
         <form>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="carModelEntry">Change Box Width</label>
                 <input type="text" class="form-control" id="boxWidth" aria-describedby="carModelHelp" placeholder="Enter box width number">
                 <button class="btn btn-primary" onclick="adjustWidth()">Width</button>
@@ -58,7 +58,7 @@
                 <label for="carTypeEntry">Change Box Height</label>
                 <input type="text" class="form-control" id="boxHeight" aria-describedby="carTypeHelp" placeholder="Enter box height number">
                 <button class="btn btn-primary" onclick="adjustHeight()">Height</button>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="carYearEntry">Change Box Color</label>
                 <input type="text" class="form-control" id="boxColor" aria-describedby="carYearHelp" placeholder="Enter a color">
@@ -72,7 +72,7 @@
 
     <script>
         function adjustWidth() {
-            
+
             var newWidth = document.getElementById("boxWidth").value;
             var box = document.getElementById("css-box");
             // var widthX = document.getElementById("getWidth").value;
@@ -85,7 +85,30 @@
         }
 
         function adjustColor() {
+            var newColor = document.getElementById("boxColor").value;
 
+            var box = document.getElementById("css-box");
+
+            var applied = box.style.backgroundColor = `${newColor}`;
+
+            // var sheet = document.createElement('style');
+
+            if (typeof (Storage) !== "undefined") {
+                // set the item into storage
+                localStorage.setItem("newColor", applied);
+                // Retrieve
+                localStorage.getItem("newColor");
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+
+            
+
+        //    box.style.backgroundColor = `${newColor}`; 
+
+            // sheet.innerHTML =
+            //     `#css-box {border: 2px solid black; background-color: ${newColor}; width: 100px; height: 100px;}`;
+            // document.body.appendChild(sheet);
         }
     </script>
     <!-- Optional JavaScript -->
