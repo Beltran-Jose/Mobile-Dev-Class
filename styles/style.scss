@@ -34,7 +34,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color:white;
+    color: white;
     padding: 20px;
 }
 
@@ -45,7 +45,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color:white;
+    color: white;
     padding: 20px;
 }
 
@@ -58,9 +58,72 @@ form {
     margin-right: auto;
 }
 
+//ANIMIATION CLASSES
+
+.changeBoxColor {
+    animation-name: colorChange;
+    animation-duration: 4s;
+}
+
+.morphBoxShape {
+    animation-name: morphShape;
+    animation-duration: 4s;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+
+.morphBoxShape:hover {
+    background-color: green;
+}
+
+//KEYFRAME ANIMATIONS
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes morphShape {
+    0% {}
+
+    25% {
+        width: 500px;
+        height: 200px;
+    }
+
+    50% {
+        width: 200px;
+        height: 400px;
+        transform: rotateX('90');
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        transform: rotateY('55');
+    }
+}
+
 // MEDIA QUERIES
 @media screen and (max-width: 850px) {
+
     .sub-navigation {
+
         margin-left: 12%;
+
     }
+
 }

@@ -33,7 +33,8 @@
                     <a class="dropdown-item" href="localstorage.html">Local Storage</a>
                     <a class="dropdown-item" href="dom.html">DOM</a>
                     <a class="dropdown-item" href="cssclassproperties.html">CSS3 using JavaScript</a>
-                    <a class="dropdown-item" href="css-transition-and-animation.html">CSS3 Transitions, Animations, and Transformations</a>
+                    <a class="dropdown-item" href="css-transition-and-animation.html">CSS3 Transitions, Animations, and
+                        Transformations</a>
                     <a class="dropdown-item" href="#">JavaScript Events</a>
                     <div class="dropdown-divider"></div>
                     <!-- <a class="dropdown-item" href="#">Separated link</a> -->
@@ -45,18 +46,19 @@
 
         <h2 class="page-subtitle">hover over the box</h2>
 
-        <div id="css-box" onmouseover="triggerAnimation()"></div>
+        <div id="css-box" onclick="triggerAnimation()"></div>
 
     </main>
     <footer></footer>
 
 
     <script>
-
         function triggerAnimation() {
-
+            // debugger
+            var element = document.getElementById("css-box");
+            // element.classList.add("changeBoxColor");
+            element.classList.add("morphBoxShape");
         }
-        
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
