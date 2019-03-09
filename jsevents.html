@@ -46,18 +46,25 @@
 
         <h2 class="page-subtitle">hover over the box</h2>
 
-        <div id="css-box" onload="triggerAnimation()"></div>
+        <div id="css-box" onmouseover="triggerAnimation()"></div>
+        <div onload="alertz()"></div>
 
     </main>
     <footer></footer>
 
 
     <script>
+        function alertz() {
+            alert("Page has loaded this alert onload!";)
+        }
         function triggerAnimation() {
             // debugger
             var element = document.getElementById("css-box");
             // element.classList.add("changeBoxColor");
             element.classList.add("morphBoxShape");
+
+            element.style.WebkitAnimation = "morphBoxShape 4s 2"; // Code for Chrome, Safari and Opera
+  			element.style.animation = "morphBoxShape 4s 2";     // Standard syntax
         }
     </script>
     <!-- Optional JavaScript -->
