@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transitions and Animations</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">HTML5 Tags for media</h1>
+                <p class="lead">HTML5 Tags - Video, Audio, and Canvas</p>
+            </div>
+        </div>
+        <ul class="nav nav-tabs sub-navigation">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">TOPICS</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a class="dropdown-item" href="js.html">JavaScript</a>
+                    <a class="dropdown-item" href="jsobjects.html">JavaScript Objects</a>
+                    <a class="dropdown-item" href="json.html">JSON</a>
+                    <a class="dropdown-item" href="ajax.html">AJAX</a>
+                    <a class="dropdown-item" href="localstorage.html">Local Storage</a>
+                    <a class="dropdown-item" href="dom.html">DOM</a>
+                    <a class="dropdown-item" href="cssclassproperties.html">CSS3 using JavaScript</a>
+                    <a class="dropdown-item" href="css-transition-and-animation.html">CSS3 Transitions, Animations, and
+                        Transformations</a>
+                    <a class="dropdown-item" href="jsevents.html">JavaScript Events</a>
+                    <a class="dropdown-item" href="canvas.html">HTM5 Tags for media</a>
+                    <a class="dropdown-item" href="#">CSS3 Transitions</a>
+                    <a class="dropdown-item" href="#">CSS3 Transformats</a>
+                    <a class="dropdown-item" href="#">CSS Anitmations</a>
+                    <div class="dropdown-divider"></div>
+                    <!-- <a class="dropdown-item" href="#">Separated link</a> -->
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container" style="margin-right: auto; margin-left: auto; width: 100%;">
+            <h3>Canvas Drawing</h3>
+            <canvas id="myCanvas" width="700" height="100" style="border:2px solid #d3d3d3; margin-left: auto; margin-right:auto;">Your
+                browser does not support the HTML5 canvas tag.</canvas>
+        </div>
+        <h3>HTML5 Video</h3>
+        <video controls style="width: 100%;">
+            <source src="./videos/Foggy Mountain.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <h3>HTML5 Audio</h3>
+        <audio controls>
+            <source src="./audio/audio-sample.mp3" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
+
+    </main>
+    <footer></footer>
+
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "60px Arial";
+        ctx.fillText("This is a <canvas> div", 10, 50);
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
