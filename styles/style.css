@@ -126,6 +126,45 @@ form {
 #div3:hover {
   background-color: green; }
 
+#divTran1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+
+#divTran2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+
+#divTran3 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+
+#divTran1:hover {
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg); }
+
+#divTran2:hover {
+  -ms-transform: skewY(50deg);
+  -webkit-transform: skewY(50deg);
+  transform: skewY(50deg); }
+
+#divTran3:hover {
+  -ms-transform: scaleY(1.5);
+  -webkit-transform: scaleY(1.5);
+  transform: scaleY(1.5); }
+
 @media screen and (max-width: 850px) {
   .sub-navigation {
     margin-left: 12%; } }
