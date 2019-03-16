@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Transitions and Animations</title>
+    <title>CSS3 Transitions</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
+
+    <style>
+
+    </style>
 </head>
 
 <body>
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">CSS3 Transitions, Animations, and Transformations</h1>
-                <p class="lead">Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</p>
+                <h1 class="display-4">CSS3 Transitions</h1>
+                <p class="lead">Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought
+                    Library)</p>
             </div>
         </div>
         <ul class="nav nav-tabs sub-navigation">
@@ -38,8 +43,8 @@
                     <a class="dropdown-item" href="jsevents.html">JavaScript Events</a>
                     <a class="dropdown-item" href="canvas.html">HTM5 Tags for media</a>
                     <a class="dropdown-item" href="css3-transitions.html">CSS3 Transitions</a>
-                    <a class="dropdown-item" href="#">CSS3 Transformats</a>
-                    <a class="dropdown-item" href="#">CSS Anitmations</a>
+                    <a class="dropdown-item" href="#">CSS3 Transformations</a>
+                    <a class="dropdown-item" href="#">CSS Animations</a>
                     <div class="dropdown-divider"></div>
                     <!-- <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
@@ -47,22 +52,24 @@
         </ul>
     </header>
     <main>
-
-        <h2 class="page-subtitle">hover over the box</h2>
-
-        <div id="css-box" onclick="triggerAnimation()"></div>
+        <div class="container">
+            <h2>Linear with 6s duration Transitions</h2>
+            <div id="div1">linear</div><br>
+            <h2>Ease with .5s delay</h2>
+            <div id="div2">ease</div><br>
+            <h2>Ease-in with 'transition-property'</h2>
+            <div id="div3">ease-in</div><br>
+        </div>
 
     </main>
     <footer></footer>
 
 
     <script>
-        function triggerAnimation() {
-            // debugger
-            var element = document.getElementById("css-box");
-            // element.classList.add("changeBoxColor");
-            element.classList.add("morphBoxShape");
-        }
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "60px Arial";
+        ctx.fillText("This is a <canvas> div", 10, 50);
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

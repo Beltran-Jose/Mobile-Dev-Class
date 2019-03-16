@@ -79,6 +79,53 @@ form {
     width: 200px;
     height: 200px;
     transform: rotateY("55"); } }
+#div1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+
+#div2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  /* Safari */
+  transition: width 2s; }
+
+#div3 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s; }
+
+#div1 {
+  transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-duration: 6s; }
+
+#div2 {
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-delay: .5s; }
+
+#div3 {
+  transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: background-color; }
+
+#div1:hover {
+  width: 300px; }
+
+#div2:hover {
+  width: 300px; }
+
+#div3:hover {
+  background-color: green; }
+
 @media screen and (max-width: 850px) {
   .sub-navigation {
     margin-left: 12%; } }
