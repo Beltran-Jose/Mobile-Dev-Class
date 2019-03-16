@@ -165,6 +165,34 @@ form {
   -webkit-transform: scaleY(1.5);
   transform: scaleY(1.5); }
 
+@keyframes colorChange {
+  from {
+    background-color: red; }
+  to {
+    background-color: yellow; } }
+@keyframes moveAnimation {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(250px, 600px); }
+  90% {
+    transform: translate(-300px, -500px); }
+  100% {
+    transform: translate(0, 0); } }
+#divAnimation1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: colorChange;
+  animation-duration: 4s; }
+
+#divAnimation2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: moveAnimation;
+  animation-duration: 4s; }
+
 @media screen and (max-width: 850px) {
   .sub-navigation {
     margin-left: 12%; } }

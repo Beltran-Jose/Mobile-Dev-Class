@@ -221,6 +221,53 @@ form {
     transform: scaleY(1.5);
 }
 
+//CSS3 ANIMATIONS
+
+
+@keyframes colorChange {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+@keyframes moveAnimation {
+0% {
+    transform:translate(0,0);
+}
+50% {
+    transform: translate(250px, 600px);
+}
+90% {
+    transform: translate(-300px, -500px);
+}
+100% {
+    transform: translate(0,0);
+}
+}
+
+
+#divAnimation1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorChange;
+    animation-duration: 4s;
+}
+
+#divAnimation2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: moveAnimation;
+    animation-duration: 4s;
+}
+
+
+
 
 
 
