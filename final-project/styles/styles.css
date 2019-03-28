@@ -1,0 +1,52 @@
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s; }
+  body .openInputs {
+    background-color: #34363C;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #A3A4A8;
+    cursor: pointer;
+    height: 100px;
+    transform: translateY(40vh);
+    width: 30px; }
+    body .openInputs p {
+      font-weight: bold;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: left;
+      text-orientation: upright;
+      writing-mode: vertical-lr; }
+  body .sidenav {
+    color: #A3A4A8;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #34363C;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; }
+    body .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s; }
+      body .sidenav a a:hover {
+        color: #f1f1f1; }
+    body .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px; }
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px; }
+
+/*# sourceMappingURL=styles.css.map */
