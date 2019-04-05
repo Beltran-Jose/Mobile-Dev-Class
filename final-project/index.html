@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- styles -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- scripts -->
     <script src="./js/styling.js"></script>
-    <title>To-Doey</title>
+    <script src="./js/drag.js"></script>
+    <title>To-DOey</title>
 </head>
 
 <body>
@@ -38,26 +42,42 @@
                 </div>
             </div>
         </nav>
+        <div class="container-fluid header-box">
+            <h1>TO-DOey</h1>
+        </div>
     </header>
     <main>
-        <div class="openInputs" onclick="openNav()">
-            <p>+</p>
-        </div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="list">
-                <ul>
-                    <li>
-                        <div class="container">
-                            <div class="row"><span class="date-span">03/28/2019</span><span
-                                    class="time-span">5:25:PM</span></div>
-                            <div class="row">
-                                This will be a TO-DOey Entry
-                            </div>
-                        </div>
+                <ul ondragend="dragEnd()" ondragover="dragOver(event)" ondragstart="dragStart(event)">
+                    <li class="list-item" draggable="true" style="background-color: purple;">
+                        <span class="date-span">03/28/2019</span>
+                        <br>
+                        <span class="time-span">5:25:PM</span>
+                        <br>
+                        <p class="to-do-text">;lakdjflakdjf;saldkfjsalkfdjsa;lkfdjas;ldkfja;lfdkja;lfdkja;lfdkjafd;lakjdf;lakdjfa;lkjfa;lfdkja;lfdkja;lfdkja;lfdkjakaljfd;alkfdj;alfdkja;ldfkja;lkfdja;ldfkjjfkldjf;adkfj;alfdj</p>
+                    </li>
+                    <li class="list-item" draggable="true" style="background-color: red;">
+                        <span class="date-span">03/28/2019</span>
+                        <br>
+                        <span class="time-span">5:25:PM</span>
+                        <br>
+                        <p class="to-do-text">;lakdjflakdjf;saldkfjsalkfdjsa;lkfdjas;ldkfja;lfdkja;lfdkja;lfdkjafd;lakjdf;lakdjfa;lkjfa;lfdkja;lfdkja;lfdkja;lfdkjakaljfd;alkfdj;alfdkja;ldfkja;lkfdja;ldfkjjfkldjf;adkfj;alfdj</p>
+                    </li>
+                    <li class="list-item" draggable="true" style="background-color: aqua;">
+                        <span class="date-span">03/28/2019</span>
+                        <br>
+                        <span class="time-span">5:25:PM</span>
+                        <br>
+                        <p class="to-do-text">;lakdjflakdjf;saldkfjsalkfdjsa;lkfdjas;ldkfja;lfdkja;lfdkja;lfdkjafd;lakjdf;lakdjfa;lkjfa;lfdkja;lfdkja;lfdkja;lfdkjakaljfd;alkfdj;alfdkja;ldfkja;lkfdja;ldfkjjfkldjf;adkfj;alfdj</p>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="openInputs" onclick="openNav()">
+            <p>+</p>
+        </div>
+
 
     </main>
     <footer></footer>

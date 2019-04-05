@@ -1,0 +1,13 @@
+@keyframes opacity-change {
+    0% {
+        background-color: rgba(54, 54, 62, 0.1);
+    }
+
+    50% {
+        background-color: rgba(54, 54, 62, 0.5);
+    }
+
+    100% {
+        background-color: rgba(54, 54, 62, 1);
+    }
+}

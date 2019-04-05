@@ -1,0 +1,144 @@
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+
+    .openInputs {
+        p {
+            font-weight: bold;
+            margin: 0;
+            padding-bottom: 25%;
+            padding-top: 25%;
+            // text-transform: uppercase;
+            text-align: left;
+            text-orientation: upright;
+            writing-mode: vertical-lr;
+            vertical-align: middle;
+        }
+
+        background-color: rgba(54, 54, 62, 0.1);
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        color: $quick-silver;
+        cursor: pointer;
+        height: 25vh;
+        letter-spacing: .5em;
+        position: absolute;
+        top: 20%;
+        transform: translateY(30vh);
+        width: 30px;
+        z-index: 10;
+
+        @include box-shadow-init();
+
+    }
+
+    //Animation shows better on desktop browsers
+    .openInputs:hover {
+        animation: opacity-change .2s ease-in;
+        animation-fill-mode: forwards;
+        @include box-shadow-finish();
+
+    }
+
+    //Better for showing ANIMATION on mobile devices. 
+    .openInputs:active {
+        animation: opacity-change .05s ease-in;
+        animation-fill-mode: forwards;
+        @include box-shadow-finish();
+    }
+
+    .sidenav {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        color: $quick-silver;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        background-color: $onyx;
+        overflow-x: hidden;
+        transition: 0.2s;
+        transition-timing-function: ease-in;
+        padding-top: 60px;
+        @include box-shadow-finish();
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: $quick-silver;
+            display: block;
+            transition: 0.3s;
+
+            a:hover {
+                color: #f1f1f1;
+            }
+        }
+
+
+        form {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+
+            input {
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            textarea {
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .btn {
+            background-color: $vivid-blue;
+            width: 100%;
+        }
+
+
+
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .list {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            .list-item {
+                .container {
+                    padding: 0;
+                }
+
+                border-radius: 8px;
+                @include box-shadow-1();
+                width: 100%;
+            }
+        }
+    }
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
