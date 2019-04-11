@@ -40,10 +40,10 @@ document.addEventListener('dragover', function(event) {
     var bounding = target.getBoundingClientRect()
     var offset = bounding.y + (bounding.height/2);
     if ( event.clientY - offset > 0 ) {
-       	target.style['border-bottom'] = 'solid 4px blue';
+       	target.style['border-bottom'] = 'solid 4px red';
         target.style['border-top'] = '';
     } else {
-        target.style['border-top'] = 'solid 4px blue';
+        target.style['border-top'] = 'solid 4px red';
         target.style['border-bottom'] = '';
     }
 });
