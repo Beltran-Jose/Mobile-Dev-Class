@@ -19,7 +19,7 @@
     <title>To-DOey</title>
 </head>
 
-<body>
+<body onload="loadItems()">
     <header>
         <nav>
             <div id="mySidenav" class="sidenav">
@@ -31,7 +31,7 @@
                             <textarea name="" id="myInput" cols="28" rows="10"></textarea>
                         </div>
                     </form>
-                    <button class="btn btn-primary" onclick="newElement(); closeNav();">DO IT</button>
+                    <button class="btn btn-primary" onclick="newToDoey(); closeNav();">DO IT</button>
                 </div>
             </div>
         </nav>
@@ -43,7 +43,7 @@
         <div class="container-fluid">
             <div class="list">
                 <ul ondragend="dragEnd()" ondragover="dragOver(event)" ondragstart="dragStart(event)" class="ul-list"
-                    id="ulList" onload="loadItems()">
+                    id="ulList">
                 </ul>
             </div>
         </div>
